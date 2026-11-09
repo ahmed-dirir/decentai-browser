@@ -1,0 +1,14 @@
+# Text with Unix line endings wherever it is checked out: a program built from a Windows checkout must be
+# the same bytes as one built on Linux.
+* text=auto eol=lf
+
+# Git must never normalize these; a PDF with its bytes rewritten is not a PDF.
+*.pdf binary
+*.xlsx binary
+*.png binary
+*.pptx binary
+*.docx binary
+
+# What a deployment installs, checked by digest: never a byte changed.
+catalog/** -text
+catalog/*/*/* binary

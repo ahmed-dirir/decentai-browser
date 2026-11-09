@@ -1,0 +1,7 @@
+# What the tests need beside the browser's own pins (agents/browser/requirements.txt) and a checkout of the platform
+# beside this repository, whose manifest checks they run (README, "Run the tests").
+pytest>=8
+pytest-timeout>=2
+pytest-xdist>=3
+pyyaml>=6
+jsonschema>=4.21

@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+
+
+# Each version's files are uploaded as its GitHub release (git takes no file over 100 MB); catalog.json names them there.
+catalog/*/*/*.zip
