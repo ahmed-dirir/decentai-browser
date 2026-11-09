@@ -169,7 +169,7 @@ class Catalog:
     v<version>, since git takes no file over 100 MB, and named in catalog.json by the release's address."""
 
     ID, NAME = "decentai_browser", "DecentAI Browser"
-    RELEASES = "https://github.com/ahmed-dirir/decentai-browser/releases/download"
+    RELEASES = "https://github.com/decentai-io/decentai-browser/releases/download"
 
     def __init__(self, out: Path, carried: Path | None):
         self.out, self.carried = out, carried

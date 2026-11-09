@@ -353,12 +353,12 @@
       },
       "programs": {
         "x86_64": {
-          "url": "https://github.com/ahmed-dirir/decentai-browser/releases/download/v1.0.0/x86_64.zip",
+          "url": "https://github.com/decentai-io/decentai-browser/releases/download/v1.0.0/x86_64.zip",
           "digest": "sha256:145f6d92ad5938b01d2ae9d6e7f0a44eb4e4e45502e240bf7925c4fabf9713ba",
           "size": 225290599
         },
         "aarch64": {
-          "url": "https://github.com/ahmed-dirir/decentai-browser/releases/download/v1.0.0/aarch64.zip",
+          "url": "https://github.com/decentai-io/decentai-browser/releases/download/v1.0.0/aarch64.zip",
           "digest": "sha256:671fc6228d676feb219793533dc4b03b223766b26a6bb394abfeec42cfa11298",
           "size": 252570629
         }

@@ -9,7 +9,7 @@ written to the platform's agent standard (`documentation/agents.md` in
 ## Install it
 
 In DecentAI, an administrator adds this catalog's address as an agent source, with no credential:
-`https://raw.githubusercontent.com/ahmed-dirir/decentai-browser/main/catalog/catalog.json`. It names each
+`https://raw.githubusercontent.com/decentai-io/decentai-browser/main/catalog/catalog.json`. It names each
 version's programs at that version's GitHub release, and the deployment checks each by its digest.
 
 ## Build and release
