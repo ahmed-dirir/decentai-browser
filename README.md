@@ -4,12 +4,12 @@ The browser agent for DecentAI, in a catalog of its own: a real web browser, dri
 site. What it does and how it keeps you in charge: [agents/browser/README.md](agents/browser/README.md). It is
 written to the platform's agent standard (`documentation/agents.md` in
 [the platform](https://github.com/decentai-io/decentai)), with the same `standard` library and build as
-[DecentAI Agents](https://github.com/decentai-io/decentai-agents).
+[DecentAI Agents](https://github.com/decentai-io/decentai-official-agents).
 
 ## Install it
 
 In DecentAI, an administrator adds this catalog's address as an agent source, with no credential:
-`https://raw.githubusercontent.com/decentai-io/decentai-browser/main/catalog/catalog.json`. It names each
+`https://raw.githubusercontent.com/decentai-io/decentai-browser-agent/main/catalog/catalog.json`. It names each
 version's programs at that version's GitHub release, and the deployment checks each by its digest.
 
 ## Build and release
@@ -35,7 +35,7 @@ of the platform beside this one.
 ```bash
 docker run -d --name browser-test -v "$PWD:/w" python:3.12-slim sleep infinity
 docker exec browser-test sh -c '
-  pip install -r /w/decentai-browser/tests/requirements.txt -r /w/decentai-browser/agents/browser/requirements.txt
+  pip install -r /w/decentai-browser-agent/tests/requirements.txt -r /w/decentai-browser-agent/agents/browser/requirements.txt
   python -m playwright install --with-deps --no-shell chromium
-  cd /w/decentai-browser && python -m pytest tests -q -n 6 --timeout=300'
+  cd /w/decentai-browser-agent && python -m pytest tests -q -n 6 --timeout=300'
 ```
