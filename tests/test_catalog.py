@@ -18,11 +18,17 @@ CATALOG = REPOSITORY / "catalog"
 FOLDERS = sorted(path for path in ROOT.iterdir() if (path / "manifest.yaml").is_file())
 
 
+#: The platform's checks, in its checkout beside this one: decentai-engine, or under its earlier name, decentai.
+PLATFORM_MANIFEST = next((found for found in (REPOSITORY.parent / name / "api_server" / "src" / "agents" / "manifest.py"
+                         for name in ("decentai-engine", "decentai")) if found.is_file()),
+                        REPOSITORY.parent / "decentai-engine" / "api_server" / "src" / "agents" / "manifest.py")
+
+
 @pytest.fixture(scope="module")
 def standard():
     """The platform's Standard, loaded by its file's path."""
     spec = importlib.util.spec_from_file_location(
-        "platform_manifest", REPOSITORY.parent / "decentai" / "api_server" / "src" / "agents" / "manifest.py")
+        "platform_manifest", PLATFORM_MANIFEST)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module.Standard
